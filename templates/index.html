@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css" integrity="sha512-RpeJZX3aH5oZN3U3JhE7Sd+HG8XQsqmP3clIbu4G28p668yNsRNj3zMASKe1ATjl/W80wuEtCx2dFA8xaebG5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+<nav>
+    <ul class="title-">
+        <li class="title" title="Chat Forever"> Chit Chat</li>
+    </ul>
+    <ul class="others">
+        
+        {% block others %}
+
+        <li title="No Need" >Home</li>
+   
+        <li title="Log in "> Log In</li>
+        <li title="Sign Up"> Sign Up</li>
+        {% endblock %}
+    </ul>
+</nav>
+
+{% block content %}
+
+<h1>Welcome to Chit Chat!</h1>
+<p>Chit Chat is a real-time messaging platform that connects people from all over the world. With Chit Chat, you can chat with friends, family, and colleagues in a fun and engaging way. Join us today and start chatting forever!</p>
+<div class="intro-buttons">
+    <a href="/login" class="button">Log In</a>
+    <a href="/signup" class="button">Sign Up</a>
+</div>
+
+<div class="intro-features">
+    <div class="feature">
+        
+        <h2>Connect with Friends</h2>
+        <p>Chat with people from all around the world, no matter where you are.</p>
+    </div>
+    <div class="feature">
+        
+        <h2>Real-time Messaging</h2>
+        <p>Send messages instantly, and stay connected with your friends and family.</p>
+    </div>
+    <div class="feature">
+        
+        <h2>Global Community</h2>
+        <p>Join a vibrant community of people from different backgrounds and cultures.</p>
+    </div>
+</div>
+
+{% endblock %}
+<footer>
+    
+</footer>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
