@@ -6,7 +6,8 @@
 <li title="Create Account"> Sign Up</li>
 {% endblock %}
 {% block content %}
-
+<link rel="stylesheet" href="../static/login.css">
+<section>
 <form action="" method="post">
     <label for="Username">Username/Email</label>
     <input type="text" name="Username" id="name">
@@ -14,4 +15,5 @@
     <input type="password" name="password" id="password">
     <button type="submit">Log In</button>
 </form>
+</section>
 {% endblock %}
