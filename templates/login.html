@@ -28,6 +28,30 @@
     </div>
 </form>
 
+{% with msgs = get_flashed_messages(with_categories=true) %}
+{% if msgs %}
+    {% for cat,msg in msgs %}
+    {% if cat == 'error' %}
+    <div class="alert" role="alert">
+        {{ msg }}
+        <button type="button" class="close" >
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+    {% if cat=='success' %}
+    <div class="success" role="success">
+        {{ msg }}
+        <button type="button" class="close" >
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+        
+    {% endfor %}
+{% endif %}
+
+{% endwith %}
 </section>
 <script src="../static/password.js"></script>
 {% endblock %}

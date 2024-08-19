@@ -22,7 +22,7 @@ body{
     font-weight: 500;
     font-style: oblique;
     font-size: 18px;
-    
+    position: relative;
     overflow-x: hidden;
     color: #000000;
     &::backdrop{
@@ -168,3 +168,34 @@ h1{
     text-decoration: underline;
 }
 h1,h2 {text-shadow: 0 0 5px var(--fourth-color), 0 0 10px var(--fourth-color), 0 0 15px var(--fourth-color),0 0 16px var(--fourth-color),0 0 17px var(--fourth-color),0 0 18px var(--fourth-color),0 0 19px var(--fourth-color), 0 0 20px var(--main-color), 0 0 30px var(--main-color), 0 0 40px var(--main-color), 0 0 50px var(--main-color-dark), 0 0 60px var(--main-color-dark), 0 0 70px var(--fourth-color);}
+section{
+    position: relative;
+}
+.alert{
+   
+    width: 40%;
+
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.success{
+  
+    width: 100%;
+
+    background-color: rgba(0, 255, 149, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.071);
+    z-index: 1000;
+}
