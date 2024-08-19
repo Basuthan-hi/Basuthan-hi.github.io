@@ -9,11 +9,25 @@
 <link rel="stylesheet" href="../static/login.css">
 <section>
 <form action="" method="post">
+    {% block form %}
     <label for="Username">Username/Email</label>
-    <input type="text" name="Username" id="name">
+    <input type="text" name="Username" id="name" placeholder="Enter your Username / Email" autofocus>
     <label for="password">Password</label>
-    <input type="password" name="password" id="password">
+    <div class="password">
+    <input type="password" name="password" id="password" placeholder="Enter your Password">
+    <button type="button" class="eye"><ion-icon name="eye-off" id="eye"></ion-icon></button>
+    </div>
+    <div id="buttons">
     <button type="submit">Log In</button>
+    <button type="reset">Cancel</button>
+    </div>
+    {% endblock %}
+    <div id="others">
+        <a href="">Forgot Password?</a>
+        <a href="/signup">No account?Create Now!</a>
+    </div>
 </form>
+
 </section>
+<script src="../static/password.js"></script>
 {% endblock %}
