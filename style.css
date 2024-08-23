@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Patua+One&display=swap');
+:root{
+    --color-1:#222831;
+    --color-2:#393E46;
+    --color-3:#00ADB5;
+    --color-4:#EEEEEE;
+}
+*{
+    box-sizing:content-box;
+    
+    padding:0;
+    font-family: 'Coiny', Times, serif;
+    color: var(--color-4);
+    background-color: var(--color-1);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Patua One', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem;
+}
+.photo{
+    margin-bottom: 10%;
+}
+img{
+
+    
+    float: right;
+    margin-right: 30pt;
+}
+p{
+    max-width: 50%;
+}
