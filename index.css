@@ -17,6 +17,7 @@
 h1,h2,h3,h4,h5,h6{
     font-family: 'Patua One', serif;
     font-weight: 700;
+    margin: 0;
     line-height: 1.2;
     
 }
@@ -27,8 +28,8 @@ img{
     
 width: 100%;
 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    
+    border-radius: 10px;
     
 }
 p{
@@ -37,16 +38,17 @@ p{
 .image{
     width: 25%;
     padding: 2px;
-    background-color: aliceblue;
+    background-color: rgba(128, 128, 128, 0.123);
   box-shadow: 0 4px 8px 0 var(--black), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   float: right;
   border: 2px solid #000;
     border-radius: 20px;
+    padding: 10px;
 }
 .context{
     width: 100%;
     text-align: center;
-    
+    background-color: ghostwhite;
     border-radius: 20px;
 }
 .main{
@@ -60,11 +62,12 @@ p{
     margin-bottom: 5px;
 }
 .sub{
-    width: 150px;
+    width: 180px;
     font-size: 10px;
     font-weight: 400;
     margin-left: auto;
     margin-right: auto;
+    
 }
 center>h1{
     font-size: 55px;
@@ -81,12 +84,16 @@ center>h1{
 center{
     background-color: rgba(0, 0, 0, 0.107);
     border-bottom: 4px solid var(--black);
+    margin: 0;
 }
 ol{
     list-style-type: none;
     padding-left: 20px;
     display: flex;
     gap: 5px;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
     flex-direction: column-reverse;
     &>li{
         margin-bottom: 10px;
@@ -95,10 +102,64 @@ ol{
         text-align: center;
         width: 300px;
     }
-    &>li:not(:first-child)::after{
-        content: url(/image.png);
-        transform: scale(1px,2px);
-       
+    &>li:not(:last-child)::after{
+        content: '';
+        transform: scale(10px,10px);
+    }
+}
+.image[title="Xavier Bichat"]:active::after{
+content: "Born :14 November 1771 \A Died: 22 July 1802";
+white-space: pre-wrap;
+
+
+}
+.image[title="Epithelial Tissues"]{
+    width: 30%;
+    &:active::after{
+    content: "Orgin : Ectoderm, Mesoderm, Endoderm \A Function : Protection, Secretion, Reproduction, Absorption and Excretion.";
+    white-space: pre-wrap;
+    display: flex;
+    align-items: center;
+    }
+}
+@keyframes fade-In {
+    from{
+        opacity: 0;
+        height: 0;
+        
+        color: transparent;
+    }
+    to{
+        opacity: 100;
+        height: auto;
         
     }
+}
+span[title="base membrane"]{
+    background-color: rgba(0, 0, 0, 0.096);
+    border-radius: 10px;
+    padding: 8px;
+    color: var(--color-2);
+   
+    font-weight: 400;
+    user-select: none;
+}
+#op{
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #c1c1c1;
+    text-align: center;
+    color: var(--black);
+    animation-name: fade-In ;
+    animation-duration: 0.1s;
+    display: block;
+    opacity: 100;
+    border-radius: 30px;
+    height: 320px;
+    z-index: -1;
+    font-size: 20px;
+}
+#cl{
+    display: none;
 }
