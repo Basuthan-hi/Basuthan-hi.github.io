@@ -1,5 +1,6 @@
-const description = document.getElementsByClassName('description')[0];
-function open_close() {
+
+function open_close(id) {
+    var description = document.getElementsByClassName(id)[0];
     if (description.id === 'op') {
         description.id = 'cl';
     } else {

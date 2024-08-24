@@ -135,7 +135,7 @@ white-space: pre-wrap;
         
     }
 }
-span[title="base membrane"]{
+span[title="base membrane"],.title{
     background-color: rgba(0, 0, 0, 0.096);
     border-radius: 10px;
     padding: 8px;
@@ -144,11 +144,11 @@ span[title="base membrane"]{
     font-weight: 400;
     user-select: none;
 }
-#op{
+#op,.description{
     padding: 10px;
     margin-top: auto;
     margin-bottom: auto;
-    background-color: #c1c1c1;
+    background-color: #c1c1c1d8;
     text-align: center;
     color: var(--black);
     animation-name: fade-In ;
@@ -156,10 +156,92 @@ span[title="base membrane"]{
     display: block;
     opacity: 100;
     border-radius: 30px;
-    height: 320px;
+    height: 400px;
     z-index: -1;
     font-size: 20px;
+    margin-top: 2%;
+}
+.highlight{
+    background-color: #3795bd3c;
+    color: var(--black);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+.highlight>b{
+    background-color: transparent;
+    font-weight: 700;
+    text-decoration: underline;
+   
+}
+.inside{
+    height: 40% !important;
+    background-color: #0000001f !important;
+    width: 50% !important;
+    border-radius: 10px;
+    color: #000000 !important;
+    margin-left: 5%;
 }
 #cl{
     display: none;
+}
+[title="basement membrane"]{
+    margin: 10px;
+    width: 30%;
+    
+    &>.context{
+        
+        width: 100%;
+        height: 40%;
+    }
+    &:active::after{
+        content: "Role : Basement membrane protects the cells from the environment ";
+        white-space: pre-wrap;
+        font-size: 13px;
+        background-color: #00000017;
+    }
+}
+ul.slip{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: max-content;
+    display: flex;
+flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    
+   gap: 30px;
+   padding: 20px;
+    &>li{
+        width: 90%;
+        height: max-content;
+        padding: 30px;
+        background-color: #3A1078;
+        border-radius: 30px;
+        color: #F7F7F8;
+        
+    }
+    &>li>h3{
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: underline;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 10px;
+        background-color: #3a107880;
+        color: #F7F7F8;
+    }
+}
+.dark{
+    color: #e0e0e1 !important;
+    width: 96% !important;
+    margin: 0 !important;
+    margin-top: 5px !important;
+    background-color: #c1c1c15f !important;
+    border-spacing: 2px;
+    border: 2px solid #c1c1c15f !important;
 }
