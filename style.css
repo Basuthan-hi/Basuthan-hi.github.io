@@ -1,104 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Patua+One&display=swap');
 :root{
-    --black:#000;
-    --color-1: #3A1078;
-    --color-2:#3795BD;
-    --color-3:#4E31AA;
-    --white:#F7F7F8;
+    --color-1:#222831;
+    --color-2:#393E46;
+    --color-3:#00ADB5;
+    --color-4:#EEEEEE;
 }
 *{
     box-sizing:content-box;
     
     padding:0;
     font-family: 'Coiny', Times, serif;
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--color-4);
+    background-color: var(--color-1);
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Patua One', serif;
     font-weight: 700;
     line-height: 1.2;
-    
+    margin: 1rem;
 }
 .photo{
     margin-bottom: 10%;
 }
 img{
-    
-width: 100%;
 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     
+    float: right;
+    margin-right: 30pt;
 }
 p{
     max-width: 50%;
-}
-.image{
-    width: 25%;
-    padding: 2px;
-    background-color: aliceblue;
-  box-shadow: 0 4px 8px 0 var(--black), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  float: right;
-  border: 2px solid #000;
-    border-radius: 20px;
-}
-.context{
-    width: 100%;
-    text-align: center;
-    
-    border-radius: 20px;
-}
-.main{
-    width: 170px;
-    font-size: 20px;
-    font-weight: 900;
-    font-variant: small-caps;
-    text-decoration: underline;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
-}
-.sub{
-    width: 150px;
-    font-size: 10px;
-    font-weight: 400;
-    margin-left: auto;
-    margin-right: auto;
-}
-center>h1{
-    font-size: 55px;
-    font-weight: 700;
-    color: var(--black);
-    background-image: linear-gradient(to bottom, var(--color-2),var(--color-1),var(--black));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 1px;
-    
-}
-center{
-    background-color: rgba(0, 0, 0, 0.107);
-    border-bottom: 4px solid var(--black);
-}
-ol{
-    list-style-type: none;
-    padding-left: 20px;
-    display: flex;
-    gap: 5px;
-    flex-direction: column-reverse;
-    &>li{
-        margin-bottom: 10px;
-        
-        padding-bottom: 10px;
-        text-align: center;
-        width: 300px;
-    }
-    &>li:not(:first-child)::after{
-        content: url(/image.png);
-        transform: scale(1px,2px);
-       
-        
-    }
 }
