@@ -10,9 +10,9 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 15% 85%;
-    grid-template-rows: max-content  1fr .01%  ;
+    grid-template-rows: max-content  1fr  ;
     grid-template-areas: 
-    "aside head"
+    "head head"
     "aside main"
     ;
   
@@ -21,18 +21,7 @@ body{
    
 
 }
-@media (width <= 735px) {
-        body{
-            grid-template-columns: 100%;
-            grid-template-rows: max-content  1fr 2fr ;
 
-            grid-template-areas: 
-    "head"
-    "main"
-    "main"
-    ;
-        }
-}
 /* nav */
 nav{
     --pad : 0px;
@@ -56,7 +45,7 @@ nav{
     letter-spacing: 1px;
     color: #e1e1e1;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  
+  padding: 15px;
 }
 /* aside */
 
@@ -82,6 +71,65 @@ aside{
     }
     
    
+}
+@keyframes  open_side_bar {
+    from{
+        left: -200px;
+    }
+    to{
+        left:0;
+    }
+}
+@keyframes close_side_bar {
+    from{
+        left: 0;
+    }
+    to{
+        left: -200px;
+    }
+}
+aside > button{
+    display: none;
+}
+@media (width <= 735px) {
+    body{
+       display: block;
+    }
+    aside{
+
+        top: 71.3333333333333333333333px;
+        width: 30%; 
+        grid-area: none;
+        background-color: #e1e1e180;
+        backdrop-filter: blur(10px);
+        position: fixed;
+        animation: close_side_bar .5s ease;
+        left: -200px;
+        top: 0;
+        z-index: 999;
+    }
+    .show{
+        display: block;
+        position: fixed;
+        top: 0;
+        animation: open_side_bar .5s ease;
+        left: 0;
+    }
+    .show > button{
+        display: block;
+        float: right;
+        background-color: transparent;
+        border: none;
+        height: 50px;
+        width: 50px;
+    }
+    .show > button > span::after{
+        content: "";
+        display: block;
+        height: 50%;
+        width: 10%;
+        background-color: #000000;
+    }
 }
 a{
     color: #333;
@@ -109,7 +157,7 @@ main{
     
 }
 img{
-    height: 35%;
+    height: 30%;
     
     object-fit: cover;
     border-radius: 5px;
@@ -117,7 +165,9 @@ img{
     float: right;
     margin: max(10px,1vw);
 }
-
+img[src="../img/Xavier_Bichat.jpg"]{
+    width: 20%;
+}
 .subtitle{
     font-size: 4dvh;
     margin: 10px;
@@ -164,25 +214,34 @@ footer{
         
     }
 }
-
+ul[class="top"]{
+    &>li{
+        display: block;
+        text-align: left;
+        margin-top: 15px;
+    }
+}
 ul:not([class="top"]){
     border-radius: 10px;
     padding: 10px;
     background: linear-gradient(to right , rgba(200, 200, 200, 0.384), rgba(82, 82, 82, 0.116));
     ::marker{
         content: "";
-        display: none;
-        
+        display: none; 
+    }
+    &>*:not(:last-child){
+        border-bottom: 1px solid #0000001f;
     }
     *{
         margin: 0;
         padding: 10px;
-        border-bottom: 1px solid #0000001f;
-        b{
+        
+    }
+    *>b{
             font-weight: 700;
             font-size: 100%;
             border: none;
-        }
+        
     }
     ul{
         background: #00000025;
@@ -191,29 +250,51 @@ ul:not([class="top"]){
         padding: 12px;
         margin-top: 10px;
         border-left: 5px solid #000000;
-        *{
-            margin: 0;
-            padding: 10px;
-            border: none;
-            padding-left: 5px;
-            b{
-                font-weight: 700;
-                font-size: 100%;
-                border: none;
-            }
-
-        }
-        ::after{
-            content: "";
-            display: block;
-            height: 1px;
-            width: 1px;
-            
-            background-color: #3366ff;
-           
-            
-           
-            
+    }
+    ul>*{
+        margin: 0;
+        padding: 10px;
+        border: none;
+        padding-left: 5px;
+    }
+    ul>*>b{
+        font-weight: 700;
+        font-size: 100%;
+        border: none;
+    }  
+    ul>*>b::after{
+        content: "";
+        display: block;
+        height: 1px;
+        width: 1px;
+        background-color: #3366ff;    
         }
     }
+
+/* open aside */
+nav > .title > button{
+    height: 30px;
+    width: 45px;
+    border:none;
+    margin: 15px;
+    float: left;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
 }
+nav > .title > button > span{
+    --pad : 2.3px;
+    content: "  ";
+    display: block;
+    width: 100%;
+    height: calc(100%/3 - var(--pad));
+   
+    background-color: #ffffffba;
+    border-radius: 70px;
+    transition: all .5s linear;
+    
+    
+}
+
