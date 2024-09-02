@@ -53,9 +53,9 @@ nav{
 aside{
     --height : 0px;
     
-    top: 75px;
-    height: calc(100vh - ( 2 * var(--height)) - 75px);
-
+    
+    height: calc(100vh - ( 2 * var(--height)) - 71.333333333333333333333333333333px);
+    top: 71.3333333333333333333333333333333333333px;
     grid-area: aside;
     background-color: #f1f1f1;
     font-size: 2cap;
@@ -78,7 +78,7 @@ nav> .title> button{
 }
 @keyframes  open_side_bar {
     from{
-        left: -200px;
+        left: -300px;
     }
     to{
         left:0;
@@ -89,7 +89,7 @@ nav> .title> button{
         left: 0;
     }
     to{
-        left: -200px;
+        left: -300px;
     }
 }
 aside> button{
@@ -106,24 +106,23 @@ aside> button{
         background-color: #e1e1e180;
         backdrop-filter: blur(10px);
         position: fixed;
-        animation: close_side_bar .5s ease;
-        left: -200px;
-        top: 0;
+        animation: close_side_bar .5s cubic-bezier(0.81, 0.17, 0.83, 0.14);
+        left: -300px;
+        
         z-index: 999;
     }
-    nav> .title> button{
-        display: block;
-    }
+    
     aside> button{
         display: block;
     }
     .show{
         display: block;
         position: fixed;
-        top: 0;
-        animation: open_side_bar .5s ease;
+       
+        animation: open_side_bar .5s cubic-bezier(0.14, 0.92, 0.15, 0.93);
         left: 0;
         width: 40%;
+        height: calc(100% - 71.33333333333333px);
     }
     .show > a{
         
@@ -147,7 +146,9 @@ aside> button{
        }
     }
 
-    
+    nav> .title> button{
+        display: block !important;
+    }
 }
 a{
     color: #333;
@@ -287,7 +288,7 @@ ul:not([class="top"]){
         width: 1px;
         background-color: #3366ff;    
         }
-    }
+}
 
 /* open aside */
 button{
