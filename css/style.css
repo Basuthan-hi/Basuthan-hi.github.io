@@ -336,6 +336,6 @@ nav{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 1px;
 }
-span[hardword]:hover > div.mean{
+span[hardword]:active > div.mean{
  display: block;
 }
