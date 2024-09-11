@@ -322,3 +322,20 @@ nav{
     position: sticky !important;
     top: 0 !important;
 }
+.mean{
+    display: none;
+    position: absolute;
+    background-color: #0000008d;
+    backdrop-filter: blur(6px);
+    padding: 15px;
+    border-radius: 0 15px 15px 0;
+    color: #e1e1e1;
+    max-width: 60%;
+    line-height: 2;
+    padding-right: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+span[hardword]:hover > div.mean{
+ display: block;
+}
