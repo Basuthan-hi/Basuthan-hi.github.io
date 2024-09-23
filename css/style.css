@@ -96,7 +96,7 @@ img{
     .title{
         font-size: 3em;
     }
-    p{
+    .text,p{
         font-size: 1em;
     }
 }
@@ -111,7 +111,7 @@ img{
     .title{
         font-size: 7em;
     }
-    p{
+    .text,p{
         font-size: 2em;
     }
 }
@@ -126,7 +126,7 @@ img{
     .title{
         font-size: 3em;
     }
-    p{
+    .text,p{
         font-size: 1.3em;
     }
 }
@@ -140,7 +140,7 @@ img{
     .title{
         font-size: 3em;
     }
-    p{
+    .text,p{
         font-size: 1em;
     }
 }
@@ -155,7 +155,7 @@ img{
     .title{
         font-size: 3em;
     }
-    p{
+    .text,p{
         font-size: 1.1em;
     }
 }
@@ -167,7 +167,7 @@ img{
     .title{
         font-size: 2em;
     }
-    p{
+    .text,p{
         font-size: .75em;
     }
 }
