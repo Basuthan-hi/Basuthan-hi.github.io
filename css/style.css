@@ -14,7 +14,7 @@ body{
     min-height: 100vh;
     width: 100vw;
     background-color: color-mix(in lab, var(--color2) 25%, var(--white) 100%);
-    padding-bottom: 100px;
+    
 }
 ::-webkit-scrollbar{
     display: none;
@@ -351,5 +351,27 @@ span.function:active ~ div.function{
         gap: 0;
         
         height: 500px;
+    }
+}
+footer{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color2);
+    margin-top: 20px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding:15px 5% 15px;
+}
+footer>a{
+    color: #b8deff;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    transition: all .15s ease;
+    &:hover{
+        color: #003d72;
     }
 }
